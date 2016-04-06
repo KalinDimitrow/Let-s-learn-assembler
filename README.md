@@ -6,3 +6,5 @@ Tools:
   qt creator - ide
   qbs - build system
   linux - os
+Tutorials:
+http://www.tutorialspoint.com/assembly_programming/
