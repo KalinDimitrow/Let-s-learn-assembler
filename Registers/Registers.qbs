@@ -5,10 +5,4 @@ import qbs.FileInfo as FileInfo
 ASM.ASMApplication
 {
  name: "Registers"
-
- Group
- {
-     name:"Documents"
-     files:"Sources/*.txt"
- }
 }
