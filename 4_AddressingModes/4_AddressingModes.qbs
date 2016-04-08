@@ -4,5 +4,5 @@ import qbs.FileInfo as FileInfo
 
 ASM.ASMApplication
 {
- name: "AddressingModes"
+ name: "4_AddressingModes"
 }

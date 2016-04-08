@@ -4,5 +4,5 @@ import qbs.FileInfo as FileInfo
 
 ASM.ASMApplication
 {
- name: "Hello"
+ name: "2_Registers"
 }

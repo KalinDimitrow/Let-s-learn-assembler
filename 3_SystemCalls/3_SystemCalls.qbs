@@ -4,5 +4,5 @@ import qbs.FileInfo as FileInfo
 
 ASM.ASMApplication
 {
- name: "SystemCalls"
+ name: "3_SystemCalls"
 }
