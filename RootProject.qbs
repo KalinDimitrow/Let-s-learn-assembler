@@ -4,5 +4,5 @@ Project
 {
     qbsSearchPaths: ["Build"]
     name: "Root"
-    references:["Hello/Hello.qbs","Registers/Registers.qbs","SystemCalls/SystemCalls.qbs"]
+    references:["Hello/Hello.qbs","Registers/Registers.qbs","SystemCalls/SystemCalls.qbs","AddressingModes/AddressingModes.qbs"]
 }
