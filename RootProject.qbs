@@ -10,5 +10,6 @@ Project
         "4_AddressingModes/4_AddressingModes.qbs",
         "5_Variables/5_Variables.qbs",
         "6_Constants/6_Constants.qbs",
-        "7_ArithmeticInstructions/7_ArithmeticInstructions.qbs"]
+        "7_ArithmeticInstructions/7_ArithmeticInstructions.qbs",
+        "8_LogicalInstructions/8_LogicalInstructions.qbs"]
 }
