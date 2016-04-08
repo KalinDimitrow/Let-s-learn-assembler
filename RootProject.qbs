@@ -11,5 +11,6 @@ Project
         "5_Variables/5_Variables.qbs",
         "6_Constants/6_Constants.qbs",
         "7_ArithmeticInstructions/7_ArithmeticInstructions.qbs",
-        "8_LogicalInstructions/8_LogicalInstructions.qbs"]
+        "8_LogicalInstructions/8_LogicalInstructions.qbs",
+        "9_Condition/9_Condition.qbs"]
 }
