@@ -16,5 +16,6 @@ Project
         "A_Loops/A_Loops.qbs",
         "B_Numbers/B_Numbers.qbs",
         "C_Arrays/C_Arrays.qbs",
-        "D_Procedures/D_Procedures.qbs"]
+        "D_Procedures/D_Procedures.qbs",
+        "E_Recursion/E_Recursion.qbs"]
 }
