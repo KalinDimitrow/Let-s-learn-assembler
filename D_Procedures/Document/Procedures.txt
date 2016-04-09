@@ -1,0 +1,18 @@
+Procedures
+Syntax:
+    proc_name:
+       procedure body
+       ...
+       ret
+
+Procedure is called with call instruction
+    CALL proc_name
+
+
+The called procedure returns the control to the calling procedure by using the RET instruction
+
+Stacks data structure
+The stack implementation has the following characteristics:
+-Only words or doublewords could be saved into the stack, not a byte
+-The stack grows in the reverse direction, i.e., toward the lower memory address
+-The top of the stack points to the last item inserted in the stack; it points to the lower byte of the last word inserted

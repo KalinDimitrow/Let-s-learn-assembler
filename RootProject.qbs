@@ -15,5 +15,6 @@ Project
         "9_Condition/9_Condition.qbs",
         "A_Loops/A_Loops.qbs",
         "B_Numbers/B_Numbers.qbs",
-        "C_Arrays/C_Arrays.qbs"]
+        "C_Arrays/C_Arrays.qbs",
+        "D_Procedures/D_Procedures.qbs"]
 }
