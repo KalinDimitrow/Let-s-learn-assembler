@@ -19,5 +19,6 @@ Project
         "D_Procedures/D_Procedures.qbs",
         "E_Recursion/E_Recursion.qbs",
         "F_Macros/F_Macros.qbs",
-        "G_FileManagement/G_FileManagement.qbs"]
+        "G_FileManagement/G_FileManagement.qbs",
+        "H_MemoryManagement/H_MemoryManagement.qbs"]
 }
