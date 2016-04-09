@@ -18,5 +18,6 @@ Project
         "C_Arrays/C_Arrays.qbs",
         "D_Procedures/D_Procedures.qbs",
         "E_Recursion/E_Recursion.qbs",
-        "F_Macros/F_Macros.qbs"]
+        "F_Macros/F_Macros.qbs",
+        "G_FileManagement/G_FileManagement.qbs"]
 }
