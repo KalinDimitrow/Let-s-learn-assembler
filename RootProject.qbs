@@ -14,5 +14,6 @@ Project
         "8_LogicalInstructions/8_LogicalInstructions.qbs",
         "9_Condition/9_Condition.qbs",
         "A_Loops/A_Loops.qbs",
-        "B_Numbers/B_Numbers.qbs"]
+        "B_Numbers/B_Numbers.qbs",
+        "C_Arrays/C_Arrays.qbs"]
 }
