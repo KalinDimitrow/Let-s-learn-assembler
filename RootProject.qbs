@@ -20,5 +20,6 @@ Project
         "E_Recursion/E_Recursion.qbs",
         "F_Macros/F_Macros.qbs",
         "G_FileManagement/G_FileManagement.qbs",
-        "H_MemoryManagement/H_MemoryManagement.qbs"]
+        "H_MemoryManagement/H_MemoryManagement.qbs",
+        "I_Exercise/I_Exercise.qbs"]
 }
