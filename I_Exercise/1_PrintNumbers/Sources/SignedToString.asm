@@ -19,17 +19,20 @@ global signed_to_string
 signed_to_string:
    ; check if the number is positive
    mov rax, [rbp - 0x8] ;get first argument from the stack
-   mov rbx,0x1
-   shl rbx,0x1F
+   ;mov rbx,0x1
+   ;shl rbx,0x1F
+   mov rbx,0x80000000; 2^31
    mov rcx,rbx
    and rcx,rax
    cmp rcx,0x0
    jz positive ; jump at positive part
    ; conver signed to unsigned
-   mov rcx,rax
-   sub rcx,rbx
-   sub rbx,rcx
-   mov rax,rbx
+   ;mov rcx,rax
+   ;sub rcx,rbx
+   ;sub rbx,rcx
+   ;mov rax,rbx
+   not eax
+   add eax,0x1
    ; put '-' at front of the string
    mov rbx,[rbp - 0x10] ;get second argument from the stack
    mov [rbx],byte '-'
