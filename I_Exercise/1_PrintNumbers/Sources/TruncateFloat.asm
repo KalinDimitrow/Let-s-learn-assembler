@@ -6,7 +6,7 @@ num dq 0
 constant dd -0.5
 
 segment .bss
-old_rounding resw 1
+
 
 segment .text
 global truncate_float
