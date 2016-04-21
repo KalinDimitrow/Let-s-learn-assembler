@@ -8,6 +8,12 @@
 ; To convert negative number as unsigned with the same absolute value we must
 ; remove firts (biggest) degree from the number (with substracting or xor)
 ; then from firts (biggest) degree substract the rest.
+
+
+%define argument_number qword [rbp - 0x8]
+%define argument_buffer qword [rbp - 0x10]
+
+
 segment .data      ;data segment
 
 segment .bss
@@ -18,7 +24,7 @@ global signed_to_string
 
 signed_to_string:
    ; check if the number is positive
-   mov rax, [rbp - 0x8] ;get first argument from the stack
+   mov rax, argument_number ;get first argument from the stack
    ;mov rbx,0x1
    ;shl rbx,0x1F
    mov rbx,0x80000000; 2^31
@@ -34,10 +40,10 @@ signed_to_string:
    not eax
    add eax,0x1
    ; put '-' at front of the string
-   mov rbx,[rbp - 0x10] ;get second argument from the stack
+   mov rbx,argument_buffer ;get second argument from the stack
    mov [rbx],byte '-'
    ; calculate address of the string buffer wtihout '-' symbol at the front
-   mov rbx,[rbp - 0x10] ;get second argument from the stack
+   mov rbx,argument_buffer ;get second argument from the stack
    add rbx,1
    ; pass argumetns and call unsigned_to_string
    push rbp ;safe base pointer
@@ -51,7 +57,7 @@ signed_to_string:
    ret;return
 positive:
    ; pass argumetns and call unsigned_to_string
-   mov rbx,[rbp - 0x10]
+   mov rbx,argument_buffer
    push rbp ;safe base pointer
    mov rbp,rsp ;asign base pointer to stack pointer
    push rax ;push first argument the number

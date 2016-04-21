@@ -7,6 +7,10 @@
 ; the number 123 in decimal can be presented as 1*10^2 +2*10^1 + 3*10^0
 ;To get all digits from rightmost to the leftmost in loop we divide the number
 ;If the result of dividing is zero there is no point to continue and the residue is the current digit
+
+%define argument_number qword [rbp - 0x8]
+%define argument_buffer qword [rbp - 0x10]
+
 segment .data      ;data segment
 
 segment .bss
@@ -15,7 +19,7 @@ segment .text	   ;code segment
 global unsigned_to_string
 
 unsigned_to_string:
-   mov rax, [rbp - 0x8] ;get first argument from the stack
+   mov rax, argument_number ;get first argument from the stack
    mov rcx,0x0
    mov rbx,0xA
 collect:
@@ -30,7 +34,7 @@ collect:
    jmp collect
 end_of_collect:
    mov rdx,rcx
-   mov rbx,[rbp - 0x10] ;get second argument from the stack
+   mov rbx,argument_buffer ;get second argument from the stack
 fill_loop:
    ;put get all collected digits from the stack and put them into the buffer (second argument)
    pop rax
