@@ -4,6 +4,7 @@ import qbs.TextFile
 
 Module
 {
+    property stringList libraries:[]
 
     FileTagger
     {
