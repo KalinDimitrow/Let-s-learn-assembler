@@ -27,7 +27,7 @@ signed_to_string:
    mov rax, argument_number ;get first argument from the stack
    ;mov rbx,0x1
    ;shl rbx,0x1F
-   mov rbx,0x80000000; 2^31
+   mov rbx,0x8000000000000000 ;2^63
    mov rcx,rbx
    and rcx,rax
    cmp rcx,0x0
@@ -37,8 +37,8 @@ signed_to_string:
    ;sub rcx,rbx
    ;sub rbx,rcx
    ;mov rax,rbx
-   not eax
-   add eax,0x1
+   not rax
+   add rax,0x1
    ; put '-' at front of the string
    mov rbx,argument_buffer ;get second argument from the stack
    mov [rbx],byte '-'

@@ -1,6 +1,6 @@
 segment .data      ;data segment
-real   dd -135.6
-number dd 112
+real   dq 1538.65
+number dq -112
 
 segment .bss
 buffer: RESB 10
@@ -9,27 +9,44 @@ segment .text	   ;code segment
    extern unsigned_to_string
    extern signed_to_string
    extern truncate_float
+   extern float_to_string
 
 _start:	           ;tell linker entry point
 
+
+   ; pass argiments call function and clean the stack
    push rbp ;safe base pointer
    mov  rbp, rsp ;asign base pointer to stack pointer
    mov  rax, [real]
    push rax ;push first argument the number
-   call truncate_float ;call the function
-   add rsp, 0x8 ;clean stack
-   pop  rbp ;recover base pointer
-
-   mov [number],rax
-   ; pass argiments call function and clean the stack
-   push rbp ;safe base pointer
-   mov  rbp, rsp ;asign base pointer to stack pointer
-   mov  rax, [number]
-   push rax ;push first argument the number
    push buffer ;push second argument the buffer
-   call signed_to_string ;call the function
+   call float_to_string ;call the function
    add rsp, 0x10 ;clean stack
    pop  rbp ;recover base pointer
+
+
+
+
+
+;   push rbp ;safe base pointer
+;   mov  rbp, rsp ;asign base pointer to stack pointer
+;   mov  rax, [real]
+;   push rax ;push first argument the number
+;   call truncate_float ;call the function
+;   add rsp, 0x8 ;clean stack
+;   pop  rbp ;recover base pointer
+;   mov [number],rax
+
+
+   ; pass argiments call function and clean the stack
+;   push rbp ;safe base pointer
+;   mov  rbp, rsp ;asign base pointer to stack pointer
+;   mov  rax, [number]
+;   push rax ;push first argument the number
+;   push buffer ;push second argument the buffer
+;   call signed_to_string ;call the function
+;   add rsp, 0x10 ;clean stack
+;   pop  rbp ;recover base pointer
 
    ;print buffer
    mov rdx,rax	   ;message length
