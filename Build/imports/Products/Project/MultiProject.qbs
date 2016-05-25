@@ -1,5 +1,5 @@
 import qbs
-import "../Utils/FindSubProjects.js" as FindSubProjects
+import "../Utils/FindSubProjects.js"
 
 Project
 {

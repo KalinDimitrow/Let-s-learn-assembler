@@ -1,5 +1,5 @@
 import qbs
-import qbs.FileInfo as FileInfo
+import qbs.FileInfo
 
 BaseCPP
 {
